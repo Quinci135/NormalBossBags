@@ -39,7 +39,7 @@ namespace NormalBossBags
 
         private void OnNpcKill(NpcKilledEventArgs eventArgs)
         {
-            if (eventArgs.npc.boss && Terraria.Main.GameMode == 0 && eventArgs.npc.netID != Terraria.ID.NPCID.CultistBoss)
+            if ((eventArgs.npc.boss || eventArgs.npc.netID == Terraria.ID.NPCID.DD2Betsy) && Terraria.Main.GameMode == 0 && eventArgs.npc.netID != Terraria.ID.NPCID.CultistBoss)
             {
                 switch (eventArgs.npc.netID)
                 {
@@ -62,7 +62,7 @@ namespace NormalBossBags
         }
         private void OnDropLoot(NpcLootDropEventArgs eventArgs)
         {
-            if (Terraria.Main.npc[eventArgs.NpcArrayIndex].boss && Terraria.Main.GameMode == 0 && eventArgs.NpcId != Terraria.ID.NPCID.CultistBoss)
+            if ((Terraria.Main.npc[eventArgs.NpcArrayIndex].boss || eventArgs.NpcId == Terraria.ID.NPCID.DD2Betsy) && Terraria.Main.GameMode == 0 && eventArgs.NpcId != Terraria.ID.NPCID.CultistBoss)
             {
                 eventArgs.Handled = true;
             }
