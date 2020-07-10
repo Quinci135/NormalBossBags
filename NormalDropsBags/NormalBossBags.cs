@@ -44,6 +44,10 @@ namespace NormalBossBags
                 switch (eventArgs.npc.netID)
                 {
                     case Terraria.ID.NPCID.HallowBoss: //eol 636
+                        if (eventArgs.npc.AI_120_HallowBoss_IsGenuinelyEnraged())
+                        {
+                            Terraria.Item.NewItem((int)eventArgs.npc.position.X, (int)eventArgs.npc.position.Y, (int)eventArgs.npc.Size.X, (int)eventArgs.npc.Size.Y, Terraria.ID.ItemID.EmpressBlade, 1);//5005 TerraPrisma
+                        }
                         eventArgs.npc.DropItemInstanced(eventArgs.npc.position, eventArgs.npc.Size, Terraria.ID.ItemID.FairyQueenBossBag); //4782 eol boss bag
                         return;
                     case Terraria.ID.NPCID.QueenSlimeBoss: //queen slime 657
