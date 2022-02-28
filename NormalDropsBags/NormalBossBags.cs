@@ -16,7 +16,7 @@ namespace NormalBossBags
 
         public override string Name => "NormalBossBags";
 
-        public override Version Version => new Version(1, 1, 0, 0);
+        public override Version Version => new Version(1, 1, 1, 0);
 
         public NormalBossBags(Main game) : base(game) 
         {
@@ -102,8 +102,6 @@ namespace NormalBossBags
                             Terraria.Item.NewItem(new EntitySource_DebugCommand(), (int)eventArgs.npc.position.X, (int)eventArgs.npc.position.Y, (int)eventArgs.npc.Size.X, (int)eventArgs.npc.Size.Y, Terraria.ID.ItemID.EmpressBlade, 1);//5005 TerraPrisma
                         } //DropItemInstanced() will tell each client there's an item but will not be an active item slot on the server so it will not be overwritten thus each client can collect the item
                         eventArgs.npc.DropItemInstanced(eventArgs.npc.position, eventArgs.npc.Size, Terraria.ID.ItemID.FairyQueenBossBag); //4782 eol boss bag
-                        return;
-                    default:
                         return;
                 }
                 
