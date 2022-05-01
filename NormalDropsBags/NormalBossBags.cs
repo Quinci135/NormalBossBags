@@ -74,6 +74,9 @@ namespace NormalBossBags
                     case Terraria.ID.NPCID.WallofFlesh:
                         eventArgs.npc.DropItemInstanced(eventArgs.npc.position, eventArgs.npc.Size, Terraria.ID.ItemID.WallOfFleshBossBag);
                         return;
+                    case Terraria.ID.NPCID.DukeFishron:
+                        eventArgs.npc.DropItemInstanced(eventArgs.npc.position, eventArgs.npc.Size, Terraria.ID.ItemID.FishronBossBag);
+                        return;
                     case Terraria.ID.NPCID.QueenSlimeBoss: 
                         eventArgs.npc.DropItemInstanced(eventArgs.npc.position, eventArgs.npc.Size, Terraria.ID.ItemID.QueenSlimeBossBag);
                         return;
