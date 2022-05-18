@@ -16,7 +16,7 @@ namespace NormalBossBags
 
         public override string Name => "NormalBossBags";
 
-        public override Version Version => new Version(1, 1, 2, 0);
+        public override Version Version => new Version(1, 1, 3, 0);
 
         public NormalBossBags(Main game) : base(game) 
         {
